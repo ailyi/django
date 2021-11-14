@@ -88,10 +88,15 @@ def play_hangman(word_from_list):
                 guessed += "-"
         print(guessed)
         input('Enter letter ')
+#dobavitj v spisok bukvu, kotorij vvjol polzovatel
 
         guess_letters.append()
         word_from_list.index()
-
+#proveritj estj li etsa bukva v nashem slove
+#esli estj, to dobavitj ejo v guess letters i perejti k sledujushei iteracii.
+# esli net, to uvelichitj chislo nashix oshibok
+#esli failds bolshe 5, to proigrali i wozwrasahemsa w predidushij cikl
+#tu zhe samuju bukvu mi ne dobavlaem v spisok
 
 
 while True:

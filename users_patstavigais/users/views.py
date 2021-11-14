@@ -3,13 +3,11 @@ from django.shortcuts import render
 from .models import User
 from .forms import CreateUserForm
 
-users = []
-
 
 def get_users(request):
 
     context = {
-        'users': users,
+        'users': User.objects.all(),
     }
 
     return render(
@@ -32,7 +30,7 @@ def add_user(request):
                 e_mail=form.cleaned_data['e_mail'],
             )
 
-            users.append(user)
+            user.save()
 
             context = {
                 'user': user,

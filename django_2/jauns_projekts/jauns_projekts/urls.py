@@ -16,18 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-import uzdevumi.views
+import students.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('show-hello', uzdevumi.views.show_hello),
-    path('show-html', uzdevumi.views.show_html),
-    path('show-datetime', uzdevumi.views.show_datetime),
-    path('pls/motivate/me', uzdevumi.views.motivate),
-    path('university', uzdevumi.views.university),
-    path('university_check', uzdevumi.views.university_check),
-    path('add_user', uzdevumi.views.add_user),
-    path('add_user_check', uzdevumi.views.add_user_check),
-    path('', uzdevumi.views.users),
+    path('student/add', students.views.add_student),
+    path('student/<int:id>', students.views.show_student),
+    path('', students.views.show_students),
 ]
 
